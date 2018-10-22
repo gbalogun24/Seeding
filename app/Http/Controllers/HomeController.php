@@ -1,8 +1,10 @@
-f<?php
+<?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,15 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function about()
+    {
+        return view('about',['test'=>'Gafar']);
+    }
+    public function profile()
+    {
+        $users = User::all();
+        return view('profile',['users'=>$users]);
     }
 }

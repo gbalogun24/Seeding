@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Your about page {{$test}}
+                        @foreach ($users as $user)
+                            <p>This is user {{ $user->name }}</p>
+                        @endforeach
                 </div>
             </div>
         </div>
