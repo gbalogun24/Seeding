@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        @foreach ($users as $user)
-                            <p>This is user {{ $user->name }}</p>
+                        @foreach ($posts as $post)
+                            <p>This is user {{ $post->body}}</p>
                         @endforeach
                 </div>
             </div>
