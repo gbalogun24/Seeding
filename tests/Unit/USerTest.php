@@ -34,5 +34,14 @@ class USerTest extends TestCase
         $this->assertNotNull($name);
     }
 
+    //Check if there are 500 users
+    public function testExample4()
+    {
+        $user = User::all();
+        //dd(count($user));
+        $this->assertCount(500,$user);
+
+    }
+
 }
 
