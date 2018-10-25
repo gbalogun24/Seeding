@@ -26,6 +26,13 @@ class USerTest extends TestCase
         $user = User::inRandomOrder()->first();
         $this->assertInstanceOf('App\User',$user);
     }
+    //Check if a name value is null
+    public function testExample3()
+    {
+        $user = User::inRandomOrder()->first();
+        $name = $user->name;
+        $this->assertNotNull($name);
+    }
 
 }
 
